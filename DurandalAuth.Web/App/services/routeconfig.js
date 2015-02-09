@@ -10,7 +10,8 @@ define(function () {
         publicArticlesUrl: "durandalauth/publicarticles",
         privateArticlesUrl: "durandalauth/privatearticles",
         categoriesUrl: "durandalauth/categories",
-		
+        profilesUrl: "durandalauth/profiles",
+
 		//Authentication Routes
         addExternalLoginUrl : "/api/account/addexternallogin",
         changePasswordUrl : "/api/account/changepassword",

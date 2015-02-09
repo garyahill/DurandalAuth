@@ -17,6 +17,9 @@ namespace DurandalAuth.Domain.Model
     [DataContract(IsReference = true)]
     public class UserProfile : IdentityUser
     {
-
+        [DataMember] //lets breeze know to be aware of this property
+        public string FirstName { get; set; }
+        [DataMember] 
+        public string LastName { get; set; }
     }
 }

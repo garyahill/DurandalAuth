@@ -13,6 +13,8 @@ namespace DurandalAuth.Data.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = true;
+            // do this in dev only
+            AutomaticMigrationDataLossAllowed = true;
         }
 
         protected override void Seed(DurandalAuth.Data.DurandalAuthDbContext context)

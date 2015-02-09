@@ -40,6 +40,16 @@ namespace DurandalAuth.Web.Controllers
         }
 
         /// <summary>
+        /// Gets a list of public user profiles
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
+        [AllowAnonymous]
+        public IQueryable<Profile> Profiles() {
+            return UnitOfWork.ProfileRepository.All();
+        }
+
+        /// <summary>
         /// Get public articles
         /// </summary>
         /// <returns>IQueryable articles</returns>

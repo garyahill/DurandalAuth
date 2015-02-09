@@ -569,6 +569,15 @@ namespace DurandalAuth.Web.Controllers
 				EmailConfirmed = false
 			};
 
+            Profile profile = new Profile() {
+                
+            };
+
+            //Adding new profile object
+            UnitOfwork.ProfileRepository.Add(profile);
+            UnitOfwork.Commit();
+
+
 			IdentityResult identityResult = await UserManager.CreateAsync(user, model.Password);
 
 			IHttpActionResult createResult = GetErrorResult(identityResult);
