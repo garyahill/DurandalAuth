@@ -39,6 +39,17 @@ namespace DurandalAuth.Web.Controllers
             throw new HttpResponseException(System.Net.HttpStatusCode.Unauthorized);            
         }
 
+        //User convention over configurtion with "Get" - Profile; don't have to specify the [HttpGet] attribute
+        public Profile GetProfile() {
+
+            //Get the current user's id and then use it to retrieve the matching profile
+            //Note: When we set up a new account we are creating a profile object with the userId as one of its props
+            //this is done in the account controller's register method
+            var userId = User.Identity.GetUserId();
+            var profile = UnitOfWork.ProfileRepository.FirstOrDefault(x => x.UserId == userId);
+            return profile;
+        }
+
         /// <summary>
         /// Gets a list of public user profiles
         /// </summary>

@@ -11,6 +11,7 @@ define(function () {
         privateArticlesUrl: "durandalauth/privatearticles",
         categoriesUrl: "durandalauth/categories",
         profilesUrl: "durandalauth/profiles",
+        profileUrl: "durandalauth/getprofile",
 
 		//Authentication Routes
         addExternalLoginUrl : "/api/account/addexternallogin",

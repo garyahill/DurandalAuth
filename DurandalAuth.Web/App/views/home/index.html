@@ -1,17 +1,37 @@
 ﻿<div id="index">
 
     <div id="featured" class="jumbotron">
+
         <div class="container">
             <h1>Welcome to our profile demo!</h1>
-            <p>This is an app we'll make together in this course</p>          
+            <p>This is an app we'll make together in this course</p>
         </div>
-    </div>
 
-    <div >
-        <ul data-bind="foreach: profiles">
-            <li data-bind="text: firstName"></li>
-        </ul>
-    </div>
+        <div class="container">
+            <div class="panel panel-default">
+                <div class="panel-heading">
 
+                    <div class="row">
+                        <div class="col-sm-8">
+                            User List
+                        </div>
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control" placeholder="User Search" data-bind="event: {keypress: search}" />
+                        </div>
+                    </div>
+
+                </div>
+                <div class="panel-body" data-bind="foreach: profiles">
+                    <div>
+                        <span data-bind="text: firstName"></span>
+                        <span data-bind="text: lastName"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
 
 </div>
+
+

@@ -75,6 +75,7 @@
                             { route: 'account/registrationcomplete',          moduleId: 'account/registrationcomplete',      title: 'Registration complete',       nav: false, hash:  "#account/registrationcomplete" },
                             { route: 'account/forgotpassword',                moduleId: 'account/forgotpassword',            title: 'Forgot password',             nav: false, hash:  "#account/forgotpassword" },
                             { route: 'account/resetpassword',                 moduleId: 'account/resetpassword',             title: 'Reset password',              nav: false, hash:  "#account/resetpassword" },
+                            { route: 'user/editProfile',                      moduleId: 'user/editProfile',                  title: 'Edit Profile',                nav: false, hash:  "#user/editProfile" },
 
                             // User articles urls
                             { route: 'user/dashboard',                        moduleId: 'user/dashboard',                    title: 'Dashboard',                   nav: false, hash : "#user/dashboard",  authorize: ["User"], confirmed : true  },

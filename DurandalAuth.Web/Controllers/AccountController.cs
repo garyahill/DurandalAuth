@@ -570,16 +570,14 @@ namespace DurandalAuth.Web.Controllers
 			};
 
             Profile profile = new Profile() {
-                
+                UserId = user.Id
             };
 
             //Adding new profile object
             UnitOfwork.ProfileRepository.Add(profile);
             UnitOfwork.Commit();
 
-
 			IdentityResult identityResult = await UserManager.CreateAsync(user, model.Password);
-
 			IHttpActionResult createResult = GetErrorResult(identityResult);
 
 			if (createResult != null)
