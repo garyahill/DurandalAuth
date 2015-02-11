@@ -8,6 +8,7 @@
         </div>
 
         <div class="container">
+
             <div class="panel panel-default">
                 <div class="panel-heading">
 
@@ -22,12 +23,18 @@
 
                 </div>
                 <div class="panel-body" data-bind="foreach: profiles">
-                    <div>
-                        <span data-bind="text: firstName"></span>
-                        <span data-bind="text: lastName"></span>
-                    </div>
+                    <a data-bind="attr: {href: '/profile?id=' + userId() }">
+                        <div class="col-sm-2">
+                            <span data-bind="text: firstName"></span>
+                            <span data-bind="text: lastName"></span>
+                        </div>
+                        <div class="col-sm-10">
+                            <span data-bind="text: bio"></span>
+                        </div>
+                    </a>
                 </div>
             </div>
+
         </div>
 
     </div>

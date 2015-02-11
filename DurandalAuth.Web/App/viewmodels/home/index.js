@@ -28,7 +28,8 @@
         if (event.which == 13) {
 
             //event.target.value = value of the input box
-            unitofwork.profiles.find(breeze.Predicate.create('firstName', 'contains', event.target.value))
+            unitofwork.profiles.find(breeze.Predicate.create('firstName', 'contains', event.target.value)
+                .or('lastName', 'contains', event.target.value))
            .then(function (data) {
                profiles(data);
            });
